@@ -1,0 +1,161 @@
+:root {
+    --textcolor: #213159;
+    --background: #f7f7f7;
+    --accents: #D1512D;
+    --border-size: 2px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.register-container {
+    max-width: 700px;
+    width: 100%;
+    background-color: var(--background);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.register-container form .user-details {
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+}
+
+.user-details .input-box .details {
+    margin-bottom: 5px;
+    font-weight: 500;
+    display: block;
+    color: var(--textcolor);
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: var(--accents);
+}
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--textcolor);
+}
+
+form .gender-details .gender {
+    color: var(--textcolor);
+}
+
+form .gender-details .category {
+    width: 80%;
+    margin: 14px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gender-details .category label {
+    display: flex;
+    align-items: center;
+}
+
+.gender-details .category .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+    border-color: var(--accents);
+    background: var(--textcolor);
+} 
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .register-button {
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .register-button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: var(--textcolor);
+    border: 2px solid var(--textcolor);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+form .register-button input:hover {
+    background: var(--accents);
+    cursor: pointer;
+}
+
+@media (max-width: 584px) {
+    .register-container {
+        max-width: 100%;
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .gender-details .category {
+        width: 100%;
+    }
+
+    .register-container form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+
+}
+
+.user-details .input-box textarea {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box textarea:hover {
+    border-color: var(--accents);
+}
